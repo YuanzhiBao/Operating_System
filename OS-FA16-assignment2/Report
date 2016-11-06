@@ -1,0 +1,15 @@
+Does your program output any garbage? If yes, why?
+Yes, when I run the progtam it output a lot garbage.
+As our group discussed and tried many different appraoches we have got the following reasons. They may not covered all the reasons but as far as we can think about these are the three main garbages.
+1.Interleaving: when we process four processes, as main, shell, consume,produce.Main left the stack as soon as the program is running. So we have three processes left in the stack and they are running at the "same" time. But when the computer switch between these three processes it run to shell serval times. Which lead to the garbage like xsh$.
+2.Galob Value Define: As we difine the n outside the main function and assign a value to it, next time we run the shell file. The n starts from the last time. Whcih means computer doesn't clear it. But when we assin value to n inside the main function but define it outside main function. It backs to normal which is eery time we re-run the shell file n is 0.
+3.Same value print repeatly: We wanted every time pruduce run one time consume run one time. But it doesn't work this way for the reason that every process run a certain timepeace. So the same value printed out repeatly.
+
+
+Are all the produced values getting consumed? Check your program for a small count like 20.
+No. 
+I put consume before produce
+When I set account to 20 produce runs after consume finished. We believe it's because the computer. 
+But when I set account to >30 produce runs before consume finish. and run back and forth.
+
+(Our group discuss together and coded separetely.)
